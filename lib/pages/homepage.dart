@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../functions.dart';
+import '../sleeprecord.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({
     Key key,
     this.title,
+    this.sleepRecords,
   }) : super(key: key);
 
   final String title;
+  final List<SleepRecord> sleepRecords;
 
   @override
   State<StatefulWidget> createState() => _MyHomePageState();
@@ -110,9 +113,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   child: ListView.separated(
-                    itemCount: 3,
+                    itemCount: widget.sleepRecords.length,
                     itemBuilder: (context, index) {
-                      return getListTile("11:42", "Nap", "1 hour 3 minute");
+                      return getListTile(
+                        widget.sleepRecords[index].time,
+                        widget.sleepRecords[index].type,
+                        widget.sleepRecords[index].duration);
                     },
                     separatorBuilder: (context, index) => Divider(
                       color: Colors.black87,
