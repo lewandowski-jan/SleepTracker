@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../functions.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({
     Key key,
@@ -13,6 +15,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  DateTime now = DateTime.now();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 margin: const EdgeInsets.only(left: 15.0),
                 child: Text(
-                  'WEDNESDAY, 13 JUL 2020',
+                  '${getDay(now.weekday)}, ${now.day} ${getMonth(now.month)} ${now.year}',
                   style: TextStyle(
                     fontSize: 17.0,
                     fontWeight: FontWeight.w600,
