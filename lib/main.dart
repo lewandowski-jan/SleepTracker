@@ -5,10 +5,7 @@ import './sleeprecord.dart';
 
 void main() => runApp(MyApp());
 
-List<SleepRecord> sleepRecords = [
-  SleepRecord("10:42", "Nap", "6 hour 4 minute"),
-  SleepRecord("10:42", "Night's sleep", "3 hour 26 minute"),
-];
+List<SleepRecord> sleepRecords = [];
 
 class MyApp extends StatelessWidget {
   @override

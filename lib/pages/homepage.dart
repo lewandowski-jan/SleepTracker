@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './secondpage.dart';
 import '../functions.dart';
 import '../sleeprecord.dart';
 
@@ -69,7 +70,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.indigo,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
-                      onPressed: () {},
+                      onPressed: () {
+                        now = DateTime.now();
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => SecondPage(
+                              now: now,
+                              sleepRecords: widget.sleepRecords,
+                            ),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Add new sleeping record',
                         style: TextStyle(
