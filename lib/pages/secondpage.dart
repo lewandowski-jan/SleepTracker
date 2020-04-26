@@ -254,6 +254,15 @@ class _SecondPageState extends State<SecondPage> {
                           widget.sleepRecords.insert(0, SleepRecord(time, type, duration));
                           Navigator.pop(context);
                         }
+                        else {
+                          showDialog(
+                            context: context,
+                            barrierDismissible: true,
+                            builder: (_) => AlertDialog(
+                              title: Text('Fill in required fields!'),
+                            ),
+                          );
+                        }
                       },
                       child: Text(
                         'Save',
