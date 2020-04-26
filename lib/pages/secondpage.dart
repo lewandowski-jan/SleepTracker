@@ -76,10 +76,9 @@ class _SecondPageState extends State<SecondPage> {
         ),
       ),
       body: Center(
-        child: Column(
+        child: ListView(
           children: <Widget>[
             Container(
-              height: 200.0,
               margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
               child: Material(
                 elevation: 20.0,
@@ -236,7 +235,7 @@ class _SecondPageState extends State<SecondPage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 40.0),
+              margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 40.0, bottom: 10.0),
               child: Row(
                 children: <Widget>[
                   Expanded(
