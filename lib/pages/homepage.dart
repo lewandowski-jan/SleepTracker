@@ -94,7 +94,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               )
             ],
-          )
+          ),
+          Container(
+            child: Expanded(
+              child: Container(
+                margin: const EdgeInsets.only(top: 25.0, left: 20.0, right: 20.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(color: Colors.grey, blurRadius: 20.0),
+                  ],
+                  borderRadius: BorderRadius.only(
+                    topLeft: const Radius.circular(10.0),
+                    topRight: const Radius.circular(10.0),
+                  ),
+                ),
+                child: ListView.separated(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text('$index')
+                    );
+                  },
+                  separatorBuilder: (context, index) => Divider(
+                    color: Colors.black87,
+                  ),
+                )
+              ),
+            ),
+          ),
         ]),
       ),
     );
