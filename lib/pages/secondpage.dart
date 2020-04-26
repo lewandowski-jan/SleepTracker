@@ -131,7 +131,7 @@ class _SecondPageState extends State<SecondPage> {
                   bottom: BorderSide(color: Colors.black54),
                 ),
               ),
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 15.0, bottom: 15.0),
               child: Row(
                 children: <Widget>[
                   Icon(Icons.brightness_2, color: Colors.indigo),
